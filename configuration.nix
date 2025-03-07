@@ -17,13 +17,12 @@
     efiInstallAsRemovable = true;
   };
   services.openssh.enable = true;
-  
+
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal
   ];
 
-  users.users.root.initialPassword = "mNcigB9yjcVCC8R6tKO0";
   users.users.root.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAjKs7qQSPMEruRDLTTyiWyvBBiiLchYgMMhwQEz4h+r claudi@MBA.local"
   ];
